@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complaint Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: green;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type=submit]:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Admin Login -->
+    <div style="text-align: right; padding: 10px; background-color: #f0f0f0;">
+        <a href="/login" style="text-decoration: none; color: #007BFF; font-weight: bold;">Admin Login</a>
+    </div>
+
+
+
+
+    <h2>Register Your Complaint</h2>
+
+    <div class="container">
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" name="mobile" required>
+
+            <label for="department">Department:</label>
+            <select name="department" required>
+                <option value="">-- Select Department --</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Water">Water</option>
+                <option value="Security">Security</option>
+                <option value="Maintenance">Maintenance</option>
+            </select>
+
+            <label for="complaint">Complaint:</label>
+            <textarea name="complaint" rows="4" required></textarea>
+
+            <input type="submit" value="Submit Complaint">
+        </form>
+    </div>
+
+</body>
+
+</html>
